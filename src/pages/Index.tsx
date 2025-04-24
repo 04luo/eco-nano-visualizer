@@ -1,6 +1,5 @@
 
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import DataDisplay from "@/components/DataDisplay";
 import EnergyChart from "@/components/EnergyChart";
 import EmissionsChart from "@/components/EmissionsChart";
@@ -20,12 +19,12 @@ const Index = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm">
-            <h2 className="text-xl font-semibold text-green-700 mb-4">能源消耗趋势</h2>
+            <h2 className="text-xl font-semibold text-green-700 mb-4">每日节能减排趋势</h2>
             <EnergyChart />
           </Card>
           
           <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm">
-            <h2 className="text-xl font-semibold text-green-700 mb-4">碳排放数据</h2>
+            <h2 className="text-xl font-semibold text-green-700 mb-4">累计节能减排数据</h2>
             <EmissionsChart />
           </Card>
         </div>
