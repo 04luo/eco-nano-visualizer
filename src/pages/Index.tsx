@@ -1,11 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import DataDisplay from "@/components/DataDisplay";
+import EnergyChart from "@/components/EnergyChart";
+import EmissionsChart from "@/components/EmissionsChart";
+import EnvironmentStats from "@/components/EnvironmentStats";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-6">
+      <div className="max-w-7xl mx-auto space-y-6">
+        <h1 className="text-4xl font-bold text-green-800 text-center mb-8">
+          环保数据监测中心
+        </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <EnvironmentStats />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+            <h2 className="text-xl font-semibold text-green-700 mb-4">能源消耗趋势</h2>
+            <EnergyChart />
+          </Card>
+          
+          <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+            <h2 className="text-xl font-semibold text-green-700 mb-4">碳排放数据</h2>
+            <EmissionsChart />
+          </Card>
+        </div>
+
+        <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm">
+          <h2 className="text-xl font-semibold text-green-700 mb-4">实时数据监测</h2>
+          <DataDisplay />
+        </Card>
       </div>
     </div>
   );
